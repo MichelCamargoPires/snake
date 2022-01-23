@@ -1,45 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Snake</title>
-    </head>
-    <body>
-     <script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela de login</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(70deg, #fff,  rgb(124, 124, 133),#130d0d);
+        }
+        div{
+            background-color: rgba(0, 0, 0, 0.8);
+            position:absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 60px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+        button{
+            background-color: rgb(106, 106, 121);
+            border: none;
+            padding:10px;
+            width: 100%;
+            border-radius: 10px;
             
-        var canvas, ctx, WIDTH, HEIGHT;
-
-        function init() {
-           canvas = document.createElement("canvas");
-           canvas.window = 600;
-           canvas.height = 600; 
-
-           document.bady.appendChild(canvas);
-           ctx = canvas.getContext("2d");
-
-           FPS = 15;
-
-           run();
-
         }
-
-        function update() {
-            console.log("a");
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
         }
-
-        function run() {
-            update();
-            draw();
-
-            setTimeout(run, 1000 / FPS);
-        }
-
-        function draw() {}
-
-        init();
-
-        </script>
-    </body>
+    </style>
+</head>
+<body>
+    <div>
+        <h1>login</h1>
+        <input type="text"placeholder="Nome">
+        <br><br>
+        <input type="password"placeholder="Senha">
+        <br><br>
+        <button>Enviar</button>
+     </div>
+</body>
 </html>
-
-<!--rever looping-->
